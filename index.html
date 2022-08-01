@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <title>Desafio 2 - Logica P1</title>
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+            <div>
+                <img class="imglogo" src="Imagenes/logo.png">
+            </div>
+            <div>
+                <h1>Juego del ahorcado</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <!-- nueva pantalla ----------------------------------------------------------->
+        <section id="pantalla1">
+            <div class="centrar">
+                <div class="cuartodiv">
+                    <button class="btn-principal"> Iniciar Juego</button>
+                </div>
+                <div class="quintodiv">
+                    <button class="btn-nuevapalabra"> Agregar nueva palabra</button>
+                </div>
+            </div>
+        </section>
+        <!-- nueva pantalla ----------------------------------------------------------->
+        <form id="pantalla2" style="display: none">
+            <div class="centrar">
+                <div class="primerdiv">
+                    <textarea name="lecturatexto" class="lecturatexto" placeholder="Inserte una nueva palabra" maxlength="8" autofocus></textarea>
+                </div>
+                <div class="segundodiv">
+                    <img src="Imagenes/Vector.png" width="15" height="15">
+                    <p class="adv">Máx. de 8 letras</p>
+                </div>
+                <div class="actions">
+                    <button class="guardar">Guardar y empezar</button>
+                    <button class="cancelar">Cancelar</button>
+                </div>
+            </div>
+        </form>
+        <!-- nueva pantalla ----------------------------------------------------------->
+        <section id="pantalla3" style="display: none">
+            <div class="centrar">
+                <div class="ahorcado">
+                    <canvas width="1200px" height="533px"></canvas>
+                </div>
+                <div class="actions">
+                    <input type="button" class="nuevojuego" value="Nuevo Juego">
+                    <input type="button" class="desistir" value="Desistir">
+                </div>
+            </div>
+        </section>
+        <!-- fin pantalla ----------------------------------------------------------->
+    </main>
+    <footer>
+        <p class="copyright">&copy Desarrollado por Gerardo Gonzalez - 2022</p>
+        <div>
+            <a class="redes" href="https://www.linkedin.com/in/gerardo-david-gonzalez-nu%C3%B1ez-ing-software/">
+                <img src="Imagenes/linkedin.png" width="30" height="30">
+            </a>
+            <a class="redes" href="https://github.com/GerardoDG">
+                <img src="Imagenes/github.png" width="30" height="30">
+            </a>
+        </div>
+
+    </footer>
+
+</body>
+
+<script src="palabrasecreta.js"></script>
+<script src="pantallas.js"></script>
+<script src="ahorcado.js"></script>
+
+</html>

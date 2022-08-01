@@ -1,0 +1,260 @@
+/*titulo*/
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+
+.imglogo {
+    margin-left: 50px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+}
+
+
+/*pantalla 1*/
+
+#pantalla1 {
+    height: 620px;
+    display: flex;
+    align-items: center;
+}
+
+.centrar {
+    width: 100%;
+}
+
+.cuartodiv {
+    width: 317px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quintodiv {
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-principal {
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    border: none;
+    color: white;
+    background: url(Imagenes/b1.png);
+    height: 114px;
+    width: 317px;
+    border-radius: 20px;
+    box-shadow: 4px -4px 18px 1px rgba(133, 128, 128, 0.75);
+    transition: 0.1s all;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-principal:hover {
+    transform: scale(1.05);
+}
+
+.btn-nuevapalabra {
+    font-family: 'Abel', sans-serif;
+    margin-top: 30px;
+    font-size: 20px;
+    border: none;
+    color: white;
+    background: url(Imagenes/b2.png);
+    height: 70px;
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 4px -4px 18px 1px rgba(133, 128, 128, 0.75);
+    transition: 0.1s all;
+    cursor: pointer;
+}
+
+.btn-nuevapalabra:hover {
+    transform: scale(1.05);
+}
+
+
+/*pantalla 2*/
+
+#pantalla2 {
+    height: 620px;
+    display: flex;
+    align-items: center;
+}
+
+.primerdiv {
+    height: 513px;
+    width: 688px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lecturatexto {
+    font-family: 'Abel', sans-serif;
+    font-size: 25px;
+    border: none;
+    background: none;
+    resize: none;
+    outline: none;
+}
+
+.segundodiv {
+    width: 150px;
+    margin-left: 25%;
+    margin-right: auto;
+}
+
+.adv {
+    vertical-align: top;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.guardar {
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    border: none;
+    color: white;
+    background: url(Imagenes/b1.png);
+    height: 67px;
+    width: 335px;
+    border-radius: 20px;
+    box-shadow: 4px -4px 18px 1px rgba(133, 128, 128, 0.75);
+    transition: 0.1s all;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.guardar:hover {
+    transform: scale(1.05);
+}
+
+.cancelar {
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    border: none;
+    color: white;
+    background: url(Imagenes/b2.png);
+    height: 67px;
+    width: 335px;
+    border-radius: 20px;
+    box-shadow: 4px -4px 18px 1px rgba(133, 128, 128, 0.75);
+    transition: 0.1s all;
+    cursor: pointer;
+}
+
+.cancelar:hover {
+    transform: scale(1.05);
+}
+
+
+/*pantalla 3*/
+
+#pantalla3 {
+    height: 620px;
+    display: flex;
+    align-items: center;
+}
+
+.ahorcado {
+    margin-top: .5rem;
+    width: 1200px;
+    height: 533px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.keyboard {
+    width: 1200px;
+    height: 173px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.actions {
+    width: 700px;
+    height: 67px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5rem;
+}
+
+.nuevojuego {
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    border: none;
+    color: white;
+    background: url(Imagenes/b1.png);
+    height: 67px;
+    width: 335px;
+    border-radius: 20px;
+    box-shadow: 4px -4px 18px 1px rgba(133, 128, 128, 0.75);
+    transition: 0.1s all;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.nuevojuego:hover {
+    transform: scale(1.05);
+}
+
+.desistir {
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    border: none;
+    color: white;
+    background: url(Imagenes/b2.png);
+    height: 67px;
+    width: 335px;
+    border-radius: 20px;
+    box-shadow: 4px -4px 18px 1px rgba(133, 128, 128, 0.75);
+    transition: 0.1s all;
+    cursor: pointer;
+}
+
+.desistir:hover {
+    transform: scale(1.05);
+}
+
+
+/*pantalla 4*/
+
+
+/*piedepagina*/
+
+footer {
+    width: 100%;
+    height: 104px;
+    text-align: center;
+    display: block;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.copyright {
+    color: black;
+    padding-top: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.redes {
+    margin: 15px 0;
+    display: inline-block;
+    margin: 10px 10px;
+}
+
+.redes:hover {
+    transform: scale(1.50);
+}
