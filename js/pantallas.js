@@ -4,27 +4,18 @@ const pantallaJuego = document.querySelector("#pantalla3");
 
 
 function first() {
-    separacion();
+    menuPrincipal();
 }
 
 function menuPrincipal() {
     pantallaPrincipal.style.display = "flex";
     pantallaAgregar.style.display = "none";
     pantallaJuego.style.display = "none";
-}
 
-function separacion() {
-    menuPrincipal();
     const btnPrincipal = document.querySelector(".btn-principal");
-    const btnañadirPalabra = document.querySelector(".btn-nuevapalabra");
-    btnPrincipal.addEventListener("click", () => { comenzarJuego() });
-    btnañadirPalabra.addEventListener("click", () => { pantalla2() })
-}
-
-function pantalla2() {
-    pantallaPrincipal.style.display = "none";
-    pantallaAgregar.style.display = "flex";
-    pantallaJuego.style.display = "none";
+    const btnanadirPalabra = document.querySelector(".btn-nuevapalabra");
+    btnPrincipal.addEventListener("click", (comenzarJuego));
+    btnanadirPalabra.addEventListener("click", (mostrarPantalla));
 }
 
 window.addEventListener("load", first)

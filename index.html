@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div id="screen" class="screen-one"></div>
     <header>
         <div class="encabezado">
             <div>
@@ -41,15 +42,18 @@
         <form id="pantalla2">
             <div class="centrar">
                 <div class="primerdiv">
+                    <div class="mensajedeConfirmacion msj1"></div>
                     <input type="text" class="lecturatexto" maxlength="8" placeholder="Ingrese una palabra">
+
                 </div>
                 <div class="segundodiv">
                     <img src="Imagenes/Vector.png" width="15" height="15">
                     <p class="adv">Máx. de 8 letras</p>
                 </div>
                 <div class="actions">
+
                     <button type="button" class="guardar">Guardar y empezar</button>
-                    <button type="button" class="cancelado">Cancelar</button>
+                    <button type="button" class="cancelado">Iniciar Juego</button>
                 </div>
             </div>
         </form>
@@ -89,7 +93,12 @@
     </footer>
 
 </body>
+<script src="js/funcionesAhorcado.js"></script>
+<script src="js/palabras.js"></script>
 <script src="js/pantallas.js"></script>
 <script src="js/palabrasecreta.js"></script>
+<script src="js/nuevaPalabra.js"></script>
+
+
 
 </html>
