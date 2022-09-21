@@ -7,8 +7,6 @@ const bases = document.querySelector(".letters");
 
 const btnNuevo = document.querySelector(".nuevojuego");
 btnNuevo.addEventListener("click", comenzarJuego)
-const btnRendirse = document.querySelector(".desistir");
-btnRendirse.addEventListener("click", menuPrincipal)
 
 const mensajeFinal = document.querySelector(".mensajeFinal");
 const mostrarPalabra = document.querySelector(".mostrarPalabra");
@@ -18,19 +16,27 @@ const pincel = canvas.getContext("2d");
 
 const btnguardar = document.querySelector(".guardar");
 btnguardar.addEventListener("click", anadirnuevaPalabra);
+const btncancel = document.querySelector(".cancelado");
+btncancel.addEventListener("click", menuPrincipal)
 
 var nuevaPalabra = document.querySelector(".lecturatexto");
+
+const btnRendirse = document.querySelector(".desistir");
+btnRendirse.addEventListener("click", menuPrincipal)
 
 
 function anadirnuevaPalabra() {
     if (nuevaPalabra.value != "") {
         console.log(nuevaPalabra.value);
-        palabras.push(nuevaPalabra.value.toUpperCase);
+        palabras.push(nuevaPalabra.value.toUpperCase());
         console.log(palabras);
+        nuevaPalabra.value = "";
+        comenzarJuego();
     } else {
         window.alert("El campo no puede estár vacio, para no ingresar una palabra presiona en CANCELAR");
         pantalla2();
     }
+
 }
 
 
@@ -56,19 +62,19 @@ function comenzarJuego() {
 
 
     window.addEventListener("keydown", comprobarLetra);
+    console.log(palabras);
 }
 
-function comprobarLetra(e) {
-    if (!findeljuego) {
-        if (e.keyCode >= 65 && e.keyCode <= 90 || e.keyCode == 192) {
-            letra = (e.key).toUpperCase();
-            console.log(letra);
-            revisarletra();
-        } else {
-            window.alert("Tecla presionada no permitida")
-        }
-    }
 
+
+function ganador() {
+    if (letrasnon == 0) {
+        mensajes(ganador = true, palabra);
+        findeljuego = true;
+    } else if (errores == 6) {
+        mensajes(ganador = false, palabra);
+        findeljuego = true;
+    }
 }
 
 function revisarletra() {
@@ -96,6 +102,19 @@ function revisarletra() {
     }
 }
 
+function comprobarLetra(e) {
+    if (!findeljuego) {
+        if (e.keyCode >= 65 && e.keyCode <= 90 || e.keyCode == 192) {
+            letra = (e.key).toUpperCase();
+            console.log(letra);
+            revisarletra();
+        } else {
+            window.alert("Tecla presionada no permitida")
+        }
+    }
+
+}
+
 function elegirPalabra() {
     return palabras[Math.floor(Math.random() * palabras.length)];
 }
@@ -103,7 +122,6 @@ function elegirPalabra() {
 function mostrarGuiones() {
     bases.innerHTML = "";
     let divpadre = document.createElement("div");
-    divpadre.classList.add("padrededivletras");
     for (let i = 0; i < palabra.length; i++) {
         let div = document.createElement("div");
         div.classList.add("letra");
@@ -162,15 +180,7 @@ function dibujarhorca() {
     }
 }
 
-function ganador() {
-    if (letrasnon == 0) {
-        mensajes(ganador = true, palabra);
-        findeljuego = true;
-    } else if (errores == 6) {
-        mensajes(ganador = false, palabra);
-        findeljuego = true;
-    }
-}
+
 
 function mensajes(ganador) {
     mensajeFinal.style.display = "flex";
