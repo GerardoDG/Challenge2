@@ -4,15 +4,17 @@ const pantallaJuego = document.querySelector("#pantalla3");
 
 
 function first() {
-    menuPrincipal();
+    separacion();
 }
 
 function menuPrincipal() {
-
     pantallaPrincipal.style.display = "flex";
     pantallaAgregar.style.display = "none";
     pantallaJuego.style.display = "none";
+}
 
+function separacion() {
+    menuPrincipal();
     const btnPrincipal = document.querySelector(".btn-principal");
     const btnañadirPalabra = document.querySelector(".btn-nuevapalabra");
     btnPrincipal.addEventListener("click", () => { comenzarJuego() });

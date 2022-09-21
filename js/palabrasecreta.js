@@ -6,7 +6,9 @@ const equivocadas = document.querySelector(".equivocadas");
 const bases = document.querySelector(".letters");
 
 const btnNuevo = document.querySelector(".nuevojuego");
+btnNuevo.addEventListener("click", comenzarJuego)
 const btnRendirse = document.querySelector(".desistir");
+btnRendirse.addEventListener("click", menuPrincipal)
 
 const mensajeFinal = document.querySelector(".mensajeFinal");
 const mostrarPalabra = document.querySelector(".mostrarPalabra");
