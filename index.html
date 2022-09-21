@@ -38,10 +38,10 @@
             </div>
         </section>
         <!-- nueva pantalla ----------------------------------------------------------->
-        <form id="pantalla2" style="display: none">
+        <form id="pantalla2">
             <div class="centrar">
                 <div class="primerdiv">
-                    <textarea name="lecturatexto" class="lecturatexto" placeholder="Inserte una nueva palabra" maxlength="8" autofocus></textarea>
+                    <input type="text" class="lecturatexto" maxlength="8" placeholder="Ingrese una palabra">
                 </div>
                 <div class="segundodiv">
                     <img src="Imagenes/Vector.png" width="15" height="15">
@@ -49,19 +49,27 @@
                 </div>
                 <div class="actions">
                     <button class="guardar">Guardar y empezar</button>
-                    <button class="cancelar">Cancelar</button>
+                    <button class="cancelado">Cancelar</button>
                 </div>
             </div>
         </form>
         <!-- nueva pantalla ----------------------------------------------------------->
-        <section id="pantalla3" style="display: none">
+        <section id="pantalla3">
             <div class="centrar">
                 <div class="ahorcado">
-                    <canvas width="1200px" height="533px"></canvas>
+                    <canvas class="dibujoAhorcado" width="300px" height="360px"></canvas>
+                    <div class="mensajeFinal"></div>
                 </div>
+                <div class="equivocadas">
+                    <p class="Leterr">Letras erroneas:</p>
+                </div>
+                <div class="letters">
+
+                </div>
+                <div class="mostrarPalabra"></div>
                 <div class="actions">
-                    <input type="button" class="nuevojuego" value="Nuevo Juego">
-                    <input type="button" class="desistir" value="Desistir">
+                    <button class="nuevojuego">Nuevo Juego</button>
+                    <button class="desistir">Desistir</button>
                 </div>
             </div>
         </section>
@@ -81,9 +89,7 @@
     </footer>
 
 </body>
-
-<script src="palabrasecreta.js"></script>
-<script src="pantallas.js"></script>
-<script src="ahorcado.js"></script>
+<script src="js/pantallas.js"></script>
+<script src="js/palabrasecreta.js"></script>
 
 </html>
